@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#4ba9e9, #4ba9e9 50%, white 50%, white 100%);
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    /* background-color: black; */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.card:hover {
+    width: 600px;
+}
+.card .img{
+    position: relative;
+   min-width: 300px;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .img img{
+    max-width: 250px;
+    transition: 0.4s ease-in-out;
+}
+.card:hover .img img{
+    transform: rotate(-35deg) translateX(-20px);
+}
+.card .details{
+    position: relative;
+    min-width: 300px;
+    overflow: hidden;
+    height: 100%;
+    background: #4ba9e9;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+    flex-direction: column;
+}
+.card .details::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid white;
+    display: flex;
+   
+}
+
+.card .details h3{
+color: white;
+text-transform: capitalize;
+font-weight: 600;
+font-size: 1.5rem;
+line-height: 1.6rem;
+}
+.card .details span{
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.85;
+    color: white;
+}
+.card .details h4{
+    margin-top: 30px;
+    color: white;
+}
+.card .details p{
+    font-size: 0.90rem;
+    color: white;
+}
+.card .details ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 5px;
+    color: white;
+
+}
+.card .details li{
+    border: 1px solid white;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card .details li:hover{
+    background-color: white;
+    color:#4ba9e9 ;
+}
+.card .details .group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+}
+.card .details a{
+    width: auto;
+    background-color: white;
+    text-decoration: none;
+    color: #4ba9e9;
+    padding: 7px;
+    
+}
+
+.card .details h2{
+    font-size: 2rem;
+}
+.card .details small{
+    font-size: 1rem;
+}
